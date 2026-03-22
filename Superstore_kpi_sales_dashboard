@@ -1,0 +1,18 @@
+### Problem Statement
+
+The problem addressed in this project is to analyze the sales data of a fictional superstore and gain valuable insights to drive business decisions. The challenges include cleaning and transforming the raw data, performing exploratory analysis, and visualizing the findings in an intuitive and informative manner.
+
+
+
+### Solution
+
+
+to address the problem, the project followed a structured data analytics approach involving data cleaning, analysis, and visualization.
+
+Initially, the raw sales dataset was cleaned using SQL and Power bi by handling missing values, removing duplicate records, and correcting inconsistencies to ensure data accuracy.
+
+Next, SQL queries were used to perform exploratory data analysis, including calculating key metrics such as total sales, profit, and regional performance. This helped in identifying trends, patterns, and key drivers of business performance.
+
+Finally, an interactive dashboard was developed in Power BI to visualize the insights. The dashboard includes KPI cards, time-based sales trends, region-wise and category-wise analysis, and interactive filters, enabling users to easily explore the data and make informed business decisions.
+
+Additionally, data quality checks were implemented to ensure reliability and consistency of the analysis.
