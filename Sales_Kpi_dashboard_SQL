@@ -1,0 +1,53 @@
+CREATE DATABASE sales_project;
+
+CREATE TABLE superstore_sales (
+Row_ID INT,
+Order_ID VARCHAR(50),
+Order_Date DATE,
+Ship_Date DATE,
+Ship_Mode VARCHAR(50),
+Customer_ID VARCHAR(50),
+Customer_Name VARCHAR(100),
+Segment VARCHAR(50),
+Country VARCHAR(50),
+City VARCHAR(50),
+State VARCHAR(50),
+Postal_Code INT,
+Region VARCHAR(50),
+Product_ID VARCHAR(50),
+Category VARCHAR(50),
+Sub_Category VARCHAR(50),
+Product_Name VARCHAR(255),
+Sales FLOAT,
+Quantity INT,
+Discount FLOAT,
+Profit FLOAT
+);
+
+use  sales_project;
+select * from superstore_sales;
+SELECT SUM(Sales) AS total_sales
+FROM superstore_sales;
+SELECT SUM(Profit) AS total_profit
+FROM superstore_sales;
+SELECT Region,
+SUM(Sales) AS revenue
+FROM superstore_sales
+GROUP BY Region;
+SELECT 
+YEAR(Order_Date) AS year,
+MONTH(Order_Date) AS month,
+SUM(Sales) AS monthly_sales
+FROM superstore_sales
+GROUP BY year,month
+ORDER BY year,month;
+select count(*)
+from superstore_sales
+where sales is null;
+SELECT Order_ID, COUNT(*)
+FROM superstore_sales
+GROUP BY Order_ID
+HAVING COUNT(*) > 1;
+Select * from superstore_sales
+where profit < 0;
+use sales_project;
